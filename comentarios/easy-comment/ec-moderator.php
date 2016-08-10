@@ -79,7 +79,7 @@ function getPages(){
 }
 
 function moderate($action){
-   $page       = realpath('.') . '/' . $_POST["page"] . '.xml';
+   $page       = realpath('.') . '/data/' . $_POST["page"] . '.xml';
    $comment_id = $_POST["comment"];
    if ( is_file($page) ){
       $xml = new DomDocument('1.0','utf-8');
@@ -158,7 +158,7 @@ function add_attribute($xml,&$node,$attr_name,$attr_value){
 }
 
 function get_comments(){
-  $page       = realpath('.') . '/' . $_POST["page"] . '.xml'; 
+  $page       = realpath('.') . '/data/' . $_POST["page"] . '.xml'; 
   $domid      = $_POST["domid"]; 
   $moderate   = $_POST["type"];
   $arr = array();
