@@ -42,7 +42,7 @@ case "comment":get_comments();break;
 }
 
 function getPages(){
-   $path = realpath('.');
+   $path = realpath('.') . '/data';
    $dircontent = scandir($path);
    
    $arr = array();
@@ -104,7 +104,7 @@ function moderate($action){
 }
 
 function addToSpamer($ip){
-   $spammer_lib = realpath('.') . '/ec-spammer.xml';
+   $spammer_lib = realpath('.') . '/data/ec-spammer.xml';
    $xml = new DomDocument('1.0','utf-8');
    $root = null;
    if ( file_exists($spammer_lib) ){
@@ -134,7 +134,7 @@ function addToSpamer($ip){
    }
 }
 function isSpammer($ip){
-   $spammer = realpath('.') . '/ec-spammer.xml';
+   $spammer = realpath('.') . '/data/ec-spammer.xml';
    $xml = new DomDocument('1.0','utf-8');
    $root = null;
    if ( file_exists($spammer) ){
