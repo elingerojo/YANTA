@@ -51,7 +51,7 @@ function getPages(){
          $ext = strtolower(substr($filename, strrpos($filename, '.') + 1));
          if ( $ext == "xml" ){
             $xml = new DomDocument('1.0','utf-8');
-            if ( $xml->load($filename,LIBXML_NOBLANKS) ){
+            if ( $xml->load('data/' . $filename,LIBXML_NOBLANKS) ){
                $root = $xml->firstChild;
                if ( $root->tagName === "comments" ){
                   $url   = $root->getAttribute("url");
