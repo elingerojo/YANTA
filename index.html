@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>EasyComment Sample</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <script type="text/javascript" 
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" 
+            src="comentarios/easy-comment/jquery.easy-comment.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function(){
+    // Your other javascript code if any
+
+    $("#id_of_your_comment_container").EasyComment({
+      path:"/comentarios/easy-comment/", //Change it to the folder where you put the easycomment files
+      moderate:false,
+      maxReply:5
+    });
+    // Your other javascript code if any
+    });
+    </script>
+  </head>
+  <body>
+	<br />
+	<h1>Borrador del art&iacute;culo para salir de la Zona de Confort</h1>
+	<h3>Favor de comentar (y responder)</h3>
+	<br />
+	<iframe src="https://docs.google.com/document/d/1Gk-7-bEa064hzDiLfbmG2BLwJc5UNjWhnxbDUeazH8U/pub?embedded=true" width="800px" height="500px"></iframe>
+    <div id="id_of_your_comment_container" style="width:800px"></div>
+  </body>
+</html> 
